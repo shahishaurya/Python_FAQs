@@ -1,0 +1,86 @@
+#find second largest element in an array(The idea is to sort the array in descending order and then return the second 
+#element which is not equal to the largest element from the sorted array.)
+def print2largest(arr,
+                  arr_size):
+  
+  if (arr_size < 2):  
+    print(" Invalid Input ")
+    return
+  
+  arr.sort
+  for i in range(arr_size-2,
+                 -1, -1):
+
+    if (arr[i] != arr[arr_size - 1]) :
+     
+      print("The second largest element is",
+            arr[i])
+      return
+  print("There is no second largest element")
+arr = [12, 35, 1, 10, 34, 1]
+n = len(arr)
+print2largest(arr, n)
+
+
+#The approach is to traverse the array twice. 
+def print2largest(arr, arr_size):
+
+	if (arr_size < 2):
+		print(" Invalid Input ");
+		return;
+
+	largest = second = -2454635434;
+
+
+	for i in range(0, arr_size):
+		largest = max(largest, arr[i]);
+
+
+	for i in range(0, arr_size):
+		if (arr[i] != largest):
+			second = max(second, arr[i]);
+
+	if (second == -2454635434):
+		print("There is no second " +
+			"largest element");
+	else:
+		print("The second largest " +
+			"element is \n", second);
+
+if __name__ == '__main__':
+
+	arr = [12, 35, 1,
+		10, 34, 1];
+	n = len(arr);
+	print2largest(arr, n);
+
+
+# Find the second largest element in a single traversal. 
+
+def print2largest(arr, arr_size):
+
+	if (arr_size < 2):
+
+		print(" Invalid Input ")
+		return
+	
+
+	first = second = -2147483648
+	for i in range(arr_size):
+	
+		if (arr[i] > first):
+		
+			second = first
+			first = arr[i]
+		elif (arr[i] > second and arr[i] != first):
+			second = arr[i]
+	
+	if (second == -2147483648):
+		print("There is no second largest element")
+	else:
+		print("The second largest element is", second)
+
+arr = [12, 35, 1, 10, 34, 1]
+n = len(arr)
+
+print2largest(arr, n)
