@@ -1,0 +1,28 @@
+from math import sqrt
+while True:
+    print('enter number to be checked:')
+    n = int(input())
+    prime_flag = 0
+    if(n == 1):
+        print('neither composite nor prime')
+    if(n > 1):
+        for i in range(2, int(sqrt(n)) + 1):
+            if (n % i == 0):
+                prime_flag = 1
+                break
+        if (prime_flag == 0):
+            print("Prime Number")
+        else:
+            print("Composite Number")
+    else:
+        print("invalid input")
+    while True:
+        answer = str(input('Run again? (y/n): '))
+        if answer in ('y', 'n'):
+            break
+        print("invalid input.")
+    if answer == 'y':
+        continue
+    else:
+        print("Goodbye")
+        break
