@@ -1,0 +1,4 @@
+def oddish_evenish_num(n):
+    return 'Oddish' if sum(map(int, str(n))) % 2 else 'Evenish'
+a= int(input("Enter the number:"))
+print(oddish_evenish_num(a))
