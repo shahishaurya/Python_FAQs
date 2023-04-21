@@ -1,0 +1,9 @@
+def gcd(p,q):
+    while q != 0:
+        p, q = q, p%q
+    return p
+def is_coprime(x, y):
+    return gcd(x, y) == 1
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+print(is_coprime(a,b))
