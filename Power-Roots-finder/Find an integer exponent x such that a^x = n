@@ -1,0 +1,13 @@
+def test(n,a):
+    m = 1
+    x = 0
+    while m != n:
+        x += 1
+        m *= a
+    return x
+
+a = int(input("Enter the base number: "))
+n = int(input("Enter the Powered number:"))
+print("a = ",a,": n = ",n)
+print("Find an integer exponent x such that a^x = n:")    
+print(test(n,a))
