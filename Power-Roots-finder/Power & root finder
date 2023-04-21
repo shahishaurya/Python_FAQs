@@ -1,0 +1,39 @@
+import math
+import numpy as np
+from math import exp, log
+def cube(num):
+    cube1 = num * num * num
+    print("The Cube of a Given Number {0}  = {1}".format(num, cube1))
+def sqre(num):
+    sqre1 = num*num
+    print("The Square of a Given Number {0}  = {1}".format(num, sqre1))
+def sqrt(num):
+    sqrt1 = math.sqrt(num)
+    print("The square root of a Given Number {0}  = {1}".format(num, sqrt1))
+def cbrt(num):
+    cbrt1 = np.cbrt(num)
+    print("The Cube root of a Given Number {0}  = {1}".format(num, cbrt1))
+def Npower(num, exponent):
+    result = pow(num, exponent)
+    print("Answer = " + str(result))
+def Nroot(num, exponent):
+    result= exp(log(num)/exponent)
+    
+number = float(input(" Please Enter any numeric Value : "))
+option= int(input("Press 1 for square, 2 for square root, 3 for cube, 4 for cube root, 5 for N powered base, 6 for Nth root of x:"))
+if option == 1:
+    square= sqre(number)
+elif option == 2:
+    sqre_root= sqrt(number)
+elif option == 3:
+    cub=cube(number)
+elif option == 4:
+    cbrt= cbrt(number)
+elif option == 5:
+    exponent = float(input(" Please Enter any numeric Value : "))
+    powers= power(number, exponent)
+elif option == 6:
+    exponent = float(input(" Please Enter any numeric Value : "))
+    Nroots= Nroot(number, exponent)
+else:
+    Print('invalid input')
