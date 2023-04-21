@@ -1,0 +1,12 @@
+import math
+def is_not_prime(n):
+    ans = False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            ans = True
+    return ans
+a= 1
+b= int(input("Enter the right limit of range:"))
+print("Nonprime numbers in the range:")
+for x in filter(is_not_prime, range(a, b)):
+    print(x)
