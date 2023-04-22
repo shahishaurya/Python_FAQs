@@ -1,0 +1,10 @@
+def sumOfGP(a,r,n) :
+    return (a * (1 - pow(r, n))) / (1 - r)
+def nthterm(a,r,n):
+    return( a * (int)(pow(r, n - 1)) )
+a = int(input("Please Enter First Number of an G.P Series: : "))
+n = int(input("Please Enter the Total Numbers in this G.P Series: : "))
+r = int(input("Please Enter the Common ratio : "))
+
+print("The Nth term of G.P Series: ",nthterm(a,r,n))
+print("The Sum of G.P Series: ",sumOfGP(a, r, n))
