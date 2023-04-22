@@ -1,0 +1,45 @@
+#Palindrom_Checker_(With string Reversal)
+while True:
+    def isPalindrome(s):
+        return s == s[::-1]
+    print("enter word to be checked:")
+    s = input()
+    ans = isPalindrome(s)
+    if ans:
+        print("Yes")
+    else:
+        print("No")
+    while True:
+        answer = str(input('Run again? (y/n): '))
+        if answer in ('y', 'n'):
+            break
+        print("invalid input.")
+    if answer == 'y':
+        continue
+    else:
+        print("Goodbye")
+        break
+#Palindrom_Checker_(Iterative method)
+while True:
+    def isPalindrome(str):
+        for i in range(0, int(len(str)/2)):
+            if str[i] != str[len(str)-i-1]:
+                return False
+        return True
+    print("enter word to be checked:")
+    s = input()
+    ans = isPalindrome(s) 
+    if (ans):
+        print("Yes")
+    else:
+        print("No")
+    while True:
+        answer = str(input('Run again? (y/n): '))
+        if answer in ('y', 'n'):
+            break
+        print("invalid input.")
+    if answer == 'y':
+        continue
+    else:
+        print("Goodbye")
+        break
