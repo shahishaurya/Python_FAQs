@@ -1,0 +1,27 @@
+import math
+def value(s):
+    u = len(s)
+    d = 0
+    for h in range(u):
+        d = d + (int(s[u-1-h]) * math.pow(2, h))
+    return d
+t = int(input())
+for i in range(t):
+    x = list(map(int, input().split()))
+    n = x[0]
+    k = x[1]
+    a = input()
+    v = 0
+    for j in range(n):
+        a = a[1:] + a[0]
+        if value(a) > v:
+            b = a
+            v = value(a)
+    ctr = 0
+    cou = 0
+    while ctr < k:
+        a = a[1:] + a[0]
+        cou = cou + 1
+        if a == b:
+            ctr = ctr + 1
+    print(cou)
