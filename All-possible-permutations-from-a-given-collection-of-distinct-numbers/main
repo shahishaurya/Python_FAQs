@@ -10,3 +10,4 @@ def permute(nums):
 my_nums = [1,2,3, 4]
 print("Original Cofllection: ",my_nums)
 print("Collection of distinct numbers:\n",permute(my_nums))
+print(len(permute(my_nums)))
